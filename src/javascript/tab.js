@@ -48,6 +48,7 @@ let dividedby = "/"
 let min = "-"
 let multiply = "x"
 let equals = ""
+let period = "."
 
 let countOne = document.getElementById("count-one")
 
@@ -109,6 +110,10 @@ function times(){
 
 function equal(){
     countOne.textContent = equals;
+}
+
+function decimal(){
+    countOne.textContent = period;
 }
 
 function reset(){

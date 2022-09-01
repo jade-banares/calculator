@@ -77,8 +77,10 @@ body{
 
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: var(--bg-equal-theme1);
-
+    background-color: hsl(6, 63%, 50%);
+  }
+  .tab button.active:hover{
+    background-color: var(--bg-equal-theme1)
   }
   
 
@@ -102,22 +104,47 @@ body{
     border:none;
     height: 15%; 
   }
+  #ThemeTwo:first-child{
+    background-color: #EEEEEE;
+    border:none;
+    height: 15%; 
+  }
   #ThemeOne:nth-child(1){
     background-color: var(--bg-display-theme1);
     border:none;
-
+  }
+  #ThemeTwo:nth-child(1){
+    background-color: var(--bg-display-theme1);
+    border:none;
   }
 
   #ThemeOne .cont button{
     background-color: var(--bg-keypad-theme1);
-    width: 70px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     transform-style: preserve-3d;
     font-weight: 700;
     font-size: 30px;
     color: hsl(221, 14%, 31%);
     font-family: 'League Spartan', sans-serif;
+    transition: 0.5s;
+  }
+  #ThemeTwo .cont button{
+    background-color: var(--bg-keypad-theme2);
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    font-weight: 700;
+    font-size: 30px;
+    color: hsl(221, 14%, 31%);
+    font-family: 'League Spartan', sans-serif;
+    transition: 0.5s;
+  }
+
+  #ThemeOne .cont button:hover{
+    background-color: var(--ls-c-white);
   }
   
   .cont:nth-child(4){
@@ -139,6 +166,21 @@ body{
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
   }
 
+  #ThemeTwo .cont button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #A59B91;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0;
+    transform: translate3d(0, 0.2em, -1em);
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+   }
+
   .del button{
     background-color: #647299 !important;
     color: var(--ls-c-white) !important;
@@ -149,6 +191,12 @@ body{
   .equal button{
     background-color: hsl(6, 63%, 50%) !important;
     color: var(--ls-c-white) !important;
+  }
+  .del button:hover{
+    background-color: hsl(224, 52%, 76%) !important;
+  }
+  .res-hover button:hover{
+    background-color: hsl(6, 93%, 67%) !important;
   }
   .equal button::before{
     background-color: hsl(6, 70%, 34%) !important;
