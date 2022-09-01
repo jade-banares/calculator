@@ -135,14 +135,13 @@ body{
   background-color: #A59B91;
   border-radius: inherit;
   box-shadow: 0 0 0 0;
-  transform: translate3d(0, 0.1em, -1em);
+  transform: translate3d(0, 0.2em, -1em);
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
   }
 
   .del button{
     background-color: #647299 !important;
     color: var(--ls-c-white) !important;
-    font-size: 20px !important;
   }
   .del button::before{
     background-color: hsl(224, 28%, 35%) !important;
@@ -150,7 +149,6 @@ body{
   .equal button{
     background-color: hsl(6, 63%, 50%) !important;
     color: var(--ls-c-white) !important;
-    font-size: 20px !important;
   }
   .equal button::before{
     background-color: hsl(6, 70%, 34%) !important;

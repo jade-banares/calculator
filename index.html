@@ -18,12 +18,12 @@
   <main>
     <!-- Calculator 1 -->
     <section >
-      <div class="flex justify-end ml-5">
+      <div class="px-5 flex justify-end ml-5">
         <span class="pr-5">1</span>
         <span class="pr-5">2</span>
         <span class="pr-2">3</span>
       </div>
-      <div class="flex justify-between mb-8">
+      <div class="px-5 flex justify-between mb-8">
         <div>
           <h2 class="font-bold text-2xl">calc</h2>
         </div> 
@@ -39,72 +39,72 @@
         </div>
         
       </div>
-      <div>
+      <div class="px-5"> 
         <div id="ThemeOne" class="content rounded-lg" style="display:block">
           <div class="w-full pt-3 lg:pb-5 lg:h-1/6">
-            <h2 class="flex justify-end text-4xl lg:text-5xl pt-3 pr-5 font-bold">399, 981</h2>
+            <h2 class="flex justify-end text-4xl lg:text-5xl pt-3 pr-5 font-bold" id="count-one">0</h2>
           </div>
 
-          <div class="mt-12 lg:mt-24 bg-[#252D44] p-4 rounded">
+          <div class="mt-24 lg:mt-24 bg-[#252D44] p-4 rounded">
             <div class="grid grid-cols-4 gap-4 cont">
               <div>
-                <button>7</button>
+                <button onclick="addSeven()">7</button>
               </div>
               <div>
-                <button>8</button>
+                <button onclick="addEight()">8</button>
               </div>
               <div>
-                <button>9</button>
+                <button onclick="addNine()">9</button>
               </div>
 
               <div class="del">
                 <button class="text-white">DEL</button>
               </div>
               <div>
-                <button>4</button>
+                <button onclick="addFour()">4</button>
               </div>
 
               <div>
-                <button>5</button>
+                <button onclick="addFive()">5</button>
               </div>
               <div>
-                <button>6</button>
+                <button onclick="addSix()">6</button>
               </div>
 
               <div>
-                <button>+</button>
+                <button onclick="addPlus()">+</button>
               </div>
               <div>
-                <button>1</button>
+                <button onclick="addOne()">1</button>
               </div>
               <div>
-                <button>2</button>
+                <button onclick="addTwo()">2</button>
               </div>
               <div>
-                <button>3</button>
+                <button onclick="addThree()">3</button>
               </div>
               <div>
-                <button>-</button>
+                <button onclick="minus()">-</button>
               </div>
 
               <div>
                 <button>.</button>
               </div>
               <div>
-                <button>0</button>
+                <button onclick="addZero()">0</button>
               </div>
               <div>
-                <button>/</button>
+                <button onclick="divide()">/</button>
               </div>
               <div>
-                <button>x</button>
+                <button onclick="times()">x</button>
               </div>
 
               <div class="del reset col-span-2">
-                <button>RESET</button>
+                <button onclick="reset()">RESET</button>
               </div>
               <div class="equal reset col-span-2">
-                <button >=</button>
+                <button onclick="equal()">=</button>
               </div>
             </div>
           </div>
