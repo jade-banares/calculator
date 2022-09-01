@@ -2,16 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/global.css">
+
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
-  <h1>Testing</h1>
-  
+  <main>
+    <!-- Calculator 1 -->
+    <section class="test">
+      <div class="flex justify-end ml-5">
+        <span class="pr-5">1</span>
+        <span class="pr-5">2</span>
+        <span class="pr-2">3</span>
+      </div>
+      <div class="flex justify-between mb-8">
+        <div>
+          <h2 class="font-bold text-2xl">calc</h2>
+        </div> 
+        
+        <div class="flex">
+          <h3 class="pr-8 uppercase">Theme</h3>
+         
+          <div class="tab">
+            <button class="links active" onclick="tabCalc(event, 'ThemeOne'); themeOne()"></button>
+            <button class="links" onclick="tabCalc(event, 'ThemeTwo');  themeTwo()"></button>
+            <button class="links" onclick="tabCalc(event, 'ThemeThree'); themeThree()"></button>
+          </div>
+        </div>
+        
+      </div>
+      <div>
+        <div id="ThemeOne" class="content rounded-lg" style="display:block">
+          <div class="w-full pt-3 lg:pb-5 lg:h-1/6">
+            <h2 class="flex justify-end text-4xl lg:text-5xl pt-3 pr-5 font-bold">399, 981</h2>
+          </div>
+
+          <div class="mt-24 bg-[#252D44] p-4 rounded">
+            <div class="grid grid-cols-4 gap-4 cont">
+              <div>
+                <button>7</button>
+              </div>
+              <div>
+                <button>8</button>
+              </div>
+              <div>
+                <button>9</button>
+              </div>
+
+              <div class="del">
+                <button class="text-white">DEL</button>
+              </div>
+              <div>
+                <button>4</button>
+              </div>
+
+              <div>
+                <button>5</button>
+              </div>
+              <div>
+                <button>6</button>
+              </div>
+
+              <div>
+                <button>+</button>
+              </div>
+              <div>
+                <button>1</button>
+              </div>
+              <div>
+                <button>2</button>
+              </div>
+              <div>
+                <button>3</button>
+              </div>
+              <div>
+                <button>-</button>
+              </div>
+
+              <div>
+                <button>.</button>
+              </div>
+              <div>
+                <button>0</button>
+              </div>
+              <div>
+                <button>/</button>
+              </div>
+              <div>
+                <button>x</button>
+              </div>
+
+              <div class="del reset col-span-2">
+                <button>RESET</button>
+              </div>
+              <div class="equal reset col-span-2">
+                <button >=</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="ThemeTwo" class="content" style="display:none">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p> 
+        </div>
+        
+        <div id="ThemeThree" class="content" style="display:none">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Calculator 2 -->
+    <section>
+
+    </section>
+
+    <!-- Calculator 3 -->
+    <section>
+
+    </section>
+    <script src="./src/javascript/tab.js"></script>
+  </main>
 </body>
 </html>
