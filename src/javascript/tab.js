@@ -1,3 +1,5 @@
+//Tab Function
+
 function tabCalc(myEvent, myTheme) {
     let i, j, links;
     j = document.getElementsByClassName("content");
@@ -13,110 +15,98 @@ function tabCalc(myEvent, myTheme) {
 }
 
 
+//Button Tab
+const btnone = document.querySelector("#btnone");
+const btntwo = document.querySelector("#btntwo");
+const btnthree = document.querySelector("#btnthree");
 
-
-function themeOne() {
+btnone.addEventListener("click", function(){
     const hexColor = "hsl(224, 27%, 31%)";
     const txtColor = "white"
     document.body.style.backgroundColor = hexColor;
     document.body.style.color = txtColor;
-}
+});
 
-function themeTwo() {
-    let hexColor = "hsl(0, 0%, 90%)";
+btntwo.addEventListener("click", function(){
+    const hexColor = "#E6E6E6";
+    const txtColor = "black"
     document.body.style.backgroundColor = hexColor;
-}
+    document.body.style.color = txtColor;
+});
 
-function themeThree() {
-    let hexColor = "hsl(268, 75%, 9%)";
+btnthree.addEventListener("click", function(){
+    const hexColor = "hsl(268, 75%, 9%)";
+    const txtColor = "#FFE33A"
     document.body.style.backgroundColor = hexColor;
-}
-
-let resetCount = 0
-let count0 = 0
-let count1 = 1
-let count2 = 2
-let count3 = 3
-let count4 = 4
-let count5 = 5
-let count6 = 6
-let count7 = 7
-let count8 = 8
-let count9 = 9
-let addplus = "+"
-let dividedby = "/"
-let min = "-"
-let multiply = "x"
-let equals = ""
-let period = "."
-
-let countOne = document.getElementById("count-one")
+    document.body.style.color = txtColor;
+});
 
 function addZero() {
-    countOne.textContent = count0
+    calc.answer.value += '0';
+    calc1.answer.value += '0';
 }
 
 function addOne() {
-    countOne.textContent = count1
+    calc.answer.value += '1';
+    calc1.answer.value += '1';
 }
 
 function addTwo(){
-    countOne.textContent = count2;
+    calc.answer.value += '2';
+    calc1.answer.value += '2';
 }
 
 function addThree(){
-    countOne.textContent = count3;
+    calc.answer.value += '3';
 }
 
 function addFour(){
-    countOne.textContent = count4;
+    calc.answer.value += '4';
 }
 
 function addFive(){
-    countOne.textContent = count5;
+    calc.answer.value += '5';
 }
 
 function addSix(){
-    countOne.textContent = count6;
+    calc.answer.value += '6';
 }
 function addSeven(){
-    countOne.textContent = count7;
+    calc.answer.value += '7'
 }
-
 function addEight(){
-    countOne.textContent = count8;
+    calc.answer.value += '8'
 }
 
 function addNine(){
-    countOne.textContent = count9;
+    calc.answer.value += '9';
 }
 
 function addPlus(){
-    countOne.textContent = addplus;
+    calc.answer.value += '+';
 }
 
 function divide(){
-    countOne.textContent = dividedby;
+    calc.answer.value += '/';
 }
 
-
 function minus(){
-    countOne.textContent = min;
+    calc.answer.value += '-';
 }
 
 function times(){
-    countOne.textContent = multiply;
+    calc.answer.value += '*';
 }
 
 function equal(){
-    countOne.textContent = equals;
+    calc.answer.value = eval(calc.answer.value);
 }
 
 function decimal(){
-    countOne.textContent = period;
+    calc.answer.value += '.';
 }
 
 function reset(){
-    countOne.textContent = resetCount;
+    calc.answer.value = '';
 }
 

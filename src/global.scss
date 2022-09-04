@@ -75,7 +75,6 @@ body{
     background-color: #ddd;
   }
 
-  /* Create an active/current tablink class */
   .tab button.active {
     background-color: hsl(6, 63%, 50%);
   }
@@ -83,7 +82,6 @@ body{
     background-color: var(--bg-equal-theme1)
   }
   
-
   .tab button.active:nth-child(2){
     background-color: var(--bg-equal-theme2);
   }
@@ -97,31 +95,24 @@ body{
     display: none;
   }
 
-
-
-  #ThemeOne:first-child{
+  #ThemeOne:first-child, #ThemeTwo:first-child{
     background-color: var(--bg-display-theme1);
     border:none;
-    height: 15%; 
+    height: 15%;
   }
-  #ThemeTwo:first-child{
-    background-color: #EEEEEE;
-    border:none;
-    height: 15%; 
-  }
+
   #ThemeOne:nth-child(1){
     background-color: var(--bg-display-theme1);
     border:none;
-  }
-  #ThemeTwo:nth-child(1){
-    background-color: var(--bg-display-theme1);
-    border:none;
+    &#ThemeTwo:nth-child(1){
+      background-color: #EEEEEE;
+    }
   }
 
-  #ThemeOne .cont button{
+  #ThemeOne .cont input, #ThemeTwo .cont input{
     background-color: var(--bg-keypad-theme1);
     width: 60px;
-    height: 60px;
+    height: 40px;
     border-radius: 5px;
     transform-style: preserve-3d;
     font-weight: 700;
@@ -129,21 +120,10 @@ body{
     color: hsl(221, 14%, 31%);
     font-family: 'League Spartan', sans-serif;
     transition: 0.5s;
-  }
-  #ThemeTwo .cont button{
-    background-color: var(--bg-keypad-theme2);
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    transform-style: preserve-3d;
-    font-weight: 700;
-    font-size: 30px;
-    color: hsl(221, 14%, 31%);
-    font-family: 'League Spartan', sans-serif;
-    transition: 0.5s;
+    cursor: pointer;
   }
 
-  #ThemeOne .cont button:hover{
+  #ThemeOne .cont input:hover,  #ThemeTwo .cont input:hover{
     background-color: var(--ls-c-white);
   }
   
@@ -151,7 +131,7 @@ body{
     background-color: var(--bg-reset-theme1);
   }
 
-  #ThemeOne .cont button::before {
+  #ThemeOne input::before, #ThemeTwo input::before{
   position: absolute;
   content: "";
   width: 100%;
@@ -164,43 +144,55 @@ body{
   box-shadow: 0 0 0 0;
   transform: translate3d(0, 0.2em, -1em);
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
+    &#ThemeTwo input::before{
+      background-color: #1D5C65;
+    }
   }
-
-  #ThemeTwo .cont button::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #A59B91;
-    border-radius: inherit;
-    box-shadow: 0 0 0 0;
-    transform: translate3d(0, 0.2em, -1em);
-    transition: all 175ms cubic-bezier(0, 0, 1, 1);
-   }
-
-  .del button{
+  
+  .del input{
     background-color: #647299 !important;
     color: var(--ls-c-white) !important;
   }
-  .del button::before{
+
+  #ThemeTwo .del input{
+    background-color: #378287 !important;
+    color: var(--ls-c-white) !important;
+  }
+  .del input::before{
     background-color: hsl(224, 28%, 35%) !important;
   }
-  .equal button{
+
+  #ThemeTwo .del input::before{
+    background-color: #1B5159 !important;
+  }
+  .equal input{
     background-color: hsl(6, 63%, 50%) !important;
     color: var(--ls-c-white) !important;
   }
-  .del button:hover{
+  #ThemeTwo .equal input{
+    background-color: #C85401 !important;
+    color: var(--ls-c-white) !important;
+  }
+
+  .del input:hover{
     background-color: hsl(224, 52%, 76%) !important;
   }
-  .res-hover button:hover{
+  #ThemeTwo .del input:hover{
+    background-color: hsl(185, 41%, 56%) !important;
+  }
+
+  .res-hover input:hover{
     background-color: hsl(6, 93%, 67%) !important;
   }
-  .equal button::before{
+
+  #ThemeTwo .res-hover input:hover{
+    background-color: hsl(25, 100%, 61%) !important;
+  }
+  
+  .equal input::before{
     background-color: hsl(6, 70%, 34%) !important;
   }
-  .reset button{
+  
+  .reset input{
     width: 100% !important;
   }

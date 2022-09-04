@@ -11,7 +11,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./dist/global.css">
 
-
+  <style>
+    
+  </style>
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
@@ -32,87 +34,157 @@
           <h3 class="pr-8 uppercase">Theme</h3>
          
           <div class="tab">
-            <button class="links active" onclick="tabCalc(event, 'ThemeOne'); themeOne()"></button>
-            <button class="links" onclick="tabCalc(event, 'ThemeTwo');  themeTwo()"></button>
-            <button class="links" onclick="tabCalc(event, 'ThemeThree'); themeThree()"></button>
+            <button class="links active" onclick="tabCalc(event, 'ThemeOne');" id="btnone"></button>
+            <button class="links" onclick="tabCalc(event, 'ThemeTwo');" id="btntwo"></button>
+            <button class="links" onclick="tabCalc(event, 'ThemeThree');" id="btnthree"></button>
           </div>
         </div>
         
       </div>
       <div class="px-5"> 
         <div id="ThemeOne" class="content rounded-lg" style="display:block">
+          <form name="calc">
           <div class="w-full pt-3 lg:pb-5 lg:h-1/6">
-            <h2 class="flex justify-end text-4xl lg:text-5xl pt-3 pr-5 font-bold" id="count-one">0</h2>
+            <!-- <h2 class="flex justify-end text-4xl lg:text-5xl pt-3 pr-5 font-bold" name = "answer">0</h2> -->
+            <input class="bg-[#192034] text-right text-2xl font-bold disabled:opacity-75 pt-3 pr-5" disabled type ="text" name="answer">
           </div>
 
-          <div class="mt-24 lg:mt-24 bg-[#252D44] p-4 rounded">
+          <div class="sm-9 mt-24 lg:mt-24 bg-[#252D44] p-4 rounded">
             <div class="grid grid-cols-4 gap-4 cont">
               <div>
-                <button onclick="addSeven()">7</button>
+                <input type="button" value="7" onclick="addSeven()"> 
               </div>
               <div>
-                <button onclick="addEight()">8</button>
+                <input type="button" value="8" onclick="addEight()"> 
               </div>
               <div>
-                <button onclick="addNine()">9</button>
+                <input type="button" value="9" onclick="addNine()"> 
               </div>
 
               <div class="del">
-                <button class="text-white">DEL</button>
+                <input type="button" value="DEL"> 
               </div>
               <div>
-                <button onclick="addFour()">4</button>
-              </div>
-
-              <div>
-                <button onclick="addFive()">5</button>
-              </div>
-              <div>
-                <button onclick="addSix()">6</button>
+                <input type="button" value="4" onclick="addFour()"> 
               </div>
 
               <div>
-                <button onclick="addPlus()">+</button>
+                <input type="button" value="5" onclick="addFive()"> 
               </div>
               <div>
-                <button onclick="addOne()">1</button>
-              </div>
-              <div>
-                <button onclick="addTwo()">2</button>
-              </div>
-              <div>
-                <button onclick="addThree()">3</button>
-              </div>
-              <div>
-                <button onclick="minus()">-</button>
+                <input type="button" value="6" onclick="addSix()"> 
               </div>
 
               <div>
-                <button onclick="decimal()">.</button>
+                <input type="button" value="+" onclick="addPlus()"> 
               </div>
               <div>
-                <button onclick="addZero()">0</button>
+                <input type="button" value="1" onclick="addOne()"> 
               </div>
               <div>
-                <button onclick="divide()">/</button>
+                <input type="button" value="2" onclick="addTwo()"> 
               </div>
               <div>
-                <button onclick="times()">x</button>
+                <input type="button" value="3" onclick="addThree()"> 
+              </div>
+              <div>
+                <input type="button" value="-" onclick="minus()">
+              </div>
+
+              <div>
+                <input type="button" value="." onclick="decimal()">
+              </div>
+              <div>
+                <input type="button" value="0" onclick="addZero()">
+              </div>
+              <div>
+                <input type="button" value="/" onclick="divide()">
+              </div>
+              <div>
+                <input type = "button" value ="x" onclick="times()">
               </div>
 
               <div class="del reset col-span-2">
-                <button onclick="reset()">RESET</button>
+                <input type = "button" value = "RESET" onclick="reset()">
               </div>
               <div class="equal reset res-hover col-span-2">
-                <button onclick="equal()">=</button>
+                <input type = "button" value = "=" onclick = "equal()">
               </div>
             </div>
           </div>
+        </form>
         </div>
         
-        <div id="ThemeTwo" class="content" style="display:none">
-          <h3>Theme 2</h3>
+        <div id="ThemeTwo" class="content rounded-lg" style="display:none">
+          <form name="calc1">
+          <div class="w-full pt-3 lg:pb-5 lg:h-1/6 bg-[#EEEEEE] rounded-lg">
+             <input class="bg-[#EEEEEE] text-right text-2xl font-bold disabled:opacity-75 pt-3 pr-5" disabled type ="text" name="answer">
+          </div>
 
+          <div class="mt-9 lg:mt-9 bg-[#D3CDCD] p-4 rounded">
+            <div class="grid grid-cols-4 gap-4 cont">
+              <div>
+                <input type="button" value="7" onclick="addSeven()"> 
+              </div>
+              <div>
+                <input type="button" value="8" onclick="addEight()"> 
+              </div>
+              <div>
+                <input type="button" value="9" onclick="addNine()"> 
+              </div>
+
+              <div class="del">
+                <input type="button" value="DEL"> 
+              </div>
+              <div>
+                <input type="button" value="4" onclick="addFour()"> 
+              </div>
+
+              <div>
+                <input type="button" value="5" onclick="addFive()"> 
+              </div>
+              <div>
+                <input type="button" value="6" onclick="addSix()"> 
+              </div>
+
+              <div>
+                <input type="button" value="+" onclick="addPlus()"> 
+              </div>
+              <div>
+                <input type="button" value="1" onclick="addOne()"> 
+              </div>
+              <div>
+                <input type="button" value="2" onclick="addThree()"> 
+              </div>
+              <div>
+                <input type="button" value="3" onclick="addThree()"> 
+              </div>
+              <div>
+                <input type="button" value="-" onclick="minus()">
+              </div>
+
+              <div>
+                <input type="button" value="." onclick="decimal()">
+              </div>
+              <div>
+                <input type="button" value="0" onclick="addZero()">
+              </div>
+              <div>
+                <input type="button" value="/" onclick="divide()">
+              </div>
+              <div>
+                <input type = "button" value ="x" onclick="times()">
+              </div>
+
+              <div class="del reset col-span-2">
+                <input type = "button" value = "RESET" onclick="reset()">
+              </div>
+              <div class="equal reset res-hover col-span-2">
+                <input type = "button" value = "=" onclick = "equal()">
+              </div>
+            </div>
+          </div>
+          </form>
         </div>
         
         <div id="ThemeThree" class="content" style="display:none">
@@ -125,7 +197,7 @@
 
     <!-- Calculator 2 -->
     <section>
-
+      
     </section>
 
     <!-- Calculator 3 -->
